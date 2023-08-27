@@ -240,7 +240,7 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 50px 0;
+  padding: 30px 0;
 }
 .header__menu {
   display: flex;
@@ -486,7 +486,7 @@ h6 {
 }
 
 .portfolio {
-  padding: 76px 0px;
+  padding: 30px 0px 60px 0;
 }
 .portfolio__title {
   margin-bottom: 85px;
@@ -495,9 +495,64 @@ h6 {
 .portfolio__title:last-child {
   margin-bottom: 0;
 }
+.portfolio__nav {
+  display: flex;
+}
+.portfolio__link {
+  font-weight: 600;
+  text-decoration-line: underline;
+  transition: all 0.4s ease 0s;
+}
+.portfolio__link:hover {
+  color: #d3a265;
+}
 
+.tabs__navigation {
+  flex: 1 1 auto;
+  display: flex;
+  -moz-column-gap: 59px;
+       column-gap: 59px;
+  margin-bottom: 29px;
+}
+.tabs__title {
+  text-transform: uppercase;
+  background-color: #fff;
+}
+.tabs__title._tab-active {
+  color: #d3a265;
+}
+.tabs__body {
+  display: none;
+}
+.tabs__body._tab-active {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  gap: 20px 30px;
+  justify-content: center;
+}
+.tabs__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 767.98px) {
+  .tabs__navigation {
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+}
+@media (max-width: 479.98px) {
+  .tabs__navigation {
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: flex-start;
+  }
+}
 .pricing {
-  padding: 102px 0px;
+  padding: 50px 0px 90px 0;
 }
 .pricing__title:not(:last-child) {
   margin-bottom: 70px;
